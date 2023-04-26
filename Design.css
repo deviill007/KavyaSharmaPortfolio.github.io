@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* { 
+* {
     padding: 100;
     margin: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
     background: #070621;
     color: #ededed;
 }
- 
+
 .header {
 
     position: fixed;
@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 5%;
-    background:#070621;
+    background: #070621;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ body {
 
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
@@ -128,7 +128,7 @@ section{
 
 }
 
-.home-content p { 
+.home-content p {
     position: relative;
     font-size: 15px;
     margin: 20px 0 40px;
@@ -188,7 +188,7 @@ section{
     transition: .5s;
 }
 
-.btn-box a:hover{
+.btn-box a:hover {
     color: #00abf0;
 }
 
@@ -349,7 +349,7 @@ section{
     text-align: center;
 }
 
-span{
+span {
     color: #00abf0;
 }
 
@@ -385,6 +385,7 @@ span{
 
 .about-content {
     text-align: center;
+    justify-content: center;
 }
 
 .about-content h3 {
@@ -394,14 +395,12 @@ span{
 .about-content p {
     font-size: 1.3rem;
     margin: 1.2rem 0 2.5rem;
-
-
 }
 
-.about-content .btn-box {
+.about-content .btn-box .btnRM {
     position: relative;
     display: flex;
-    height: 40px;
+    height: 55px;
 }
 
 .skills {
@@ -414,7 +413,7 @@ span{
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 5rem;
 }
 
@@ -433,6 +432,26 @@ span{
     border: .2rem solid #00abf0;
     border-radius: 8px;
     padding: .5rem 1.5rem;
+}
+
+.skills-box:hover {
+    background: #070621;
+}
+
+.skills-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 1s;
+}
+
+.skills-box:hover::before {
+    width: 100%;
 }
 
 .skills-content .progress {
@@ -478,7 +497,7 @@ span{
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
     width: 60%;
-} 
+}
 
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -490,12 +509,12 @@ span{
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 60%;
+    width: 75%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
-} 
+    width: 90%;
+}
 
 .contact {
     min-height: auto;
@@ -537,7 +556,30 @@ span{
     color: #ededed;
 }
 
-.contact form .textarea-field { 
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .focus:hover,
+.contact form .textarea-field textarea:hover {
+    width: 100%;
+}
+
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus {
+    width: 100%;
+}
+
+.contact form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
@@ -545,6 +587,101 @@ span{
 
 .contact form .textarea-field textarea {
     resize: none;
+}
+
+.contact form .btn-box {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 50px;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 10px;
+    font-size: 19px;
+    color: #070621;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.contact .btn-box:hover {
+    background: #002554;
+    cursor: pointer;
+    color: #00abf0;
+}
+
+.contact .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: #070621;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact .btn-box:hover:before {
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 6%;
+    background-color: #002554;
+}
+
+.footer-text p {
+    font-size: 20px;
+}
+
+.footer-icontop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color: #00abf0;
+    border: .1rem solid #00abf0;
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-icontop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #002554;
+    z-index: -1;
+    transition: .6s;
+}
+
+.footer-icontop a:hover::before{
+    width: 100%;
+}
+
+.footer-icontop a i {
+    font-size: 1.3rem;
+    color: #070621;
+    transition: .6s;
+}
+
+.footer-icontop a:hover i {
+    color: #00abf0;
 }
 
 
