@@ -108,24 +108,61 @@ section {
 }
 
 
-.home-content h3 {
+.home-content .text-animate {
     position: relative;
+    color: #00abf0;
     font-size: 30px;
     font-weight: 500;
-    color: #00abf0;
+    display: flex;
 }
 
-.home-content h3::before {
+.home-content .text-animate .first-text {
+    color: #ededed;
+}
+
+/* .home-content .text-animate .second-text::before {
     content: '';
     position: absolute;
+    font-weight: 600;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     background: #070621;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.4s;
+    border-left: 2px solid #00abf0;
+    animation: animate 2s steps(20) infinite;
+    overflow: hidden;
+} */
 
+.home-content .text-animate .second-text{
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+.second-text li{
+  list-style: none;
+  color: #00abf0;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  left: -25px;
+  animation: slide 12s steps(4) infinite;
+}
+
+.second-text li span{
+  position: relative;
+  line-height: 50px;
+}
+.second-text li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #070621;
+  border-left: 2px solid #00abf0;
+  animation: typing 3s steps(20) infinite;
 }
 
 .home-content p {
@@ -720,3 +757,27 @@ span {
         pointer-events: auto;
     }
 }
+
+/* @keyframes animate {
+    10%, 20%{
+        width: 100%;
+    }
+    100%{
+        width: 71%; 
+    }
+} */
+
+@keyframes slide {
+    100%{
+      top: -200px;
+    }
+  }
+
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
