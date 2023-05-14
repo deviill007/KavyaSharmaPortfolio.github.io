@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="images/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
@@ -11,12 +12,13 @@
 
 </head>
 
-<body>
+<body class="blur">
 
   <header class="header">
     <a href="#" class="logo">Kavya Sharma</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
     <nav class="Navbar">
-      <a href="#home">Home</a>
+      <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -27,7 +29,7 @@
     <div class="home-content">
       <h1>Hi, I'm Kavya Sharma</h1>
       <div class="text-animate">
-        <span class="first-text">I'm</span>
+        <span class="first-text">A</span>
         <ul class="second-text">
           <li><span>Frontend Developer</span></li>
           <li><span>UI/UX Designer</span></li>
@@ -38,8 +40,8 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga illum sed eum velit eveniet sunt voluptas vel
         beatae quaerat id, natus sint, omnis laborum libero consequuntur quisquam?</p>
       <div class="btn-box">
-        <a href="#" class="">Hire Me</a>
-        <a href="#" class="">Get in Touch</a>
+        <a href="mailto:8kavyasharma@email.com" class="">Hire Me</a>
+        <a href="#contact" class="">Get in Touch</a>
         <a href="https://drive.google.com/u/1/uc?id=1_YNcREgzqMBCh-6Ohao_PjuhX01Xo3Kj&export=download" class="">Download
           CV</a>
       </div>
@@ -71,11 +73,12 @@
         officiis nisi ipsa corporis fuga nulla? Provident nisi perspiciatis accusamus sit ratione tempore, qui vitae
         magni distinctio eveniet velit officia dolores, reiciendis quasi?</p>
 
-      <div class="btn-box">
-        <a href="#" class="btnRM">Read More</a>
-      </div>
-
+      
     </div>
+    <div class="btn-box">
+      <button onclick="openPopup()" class="RMbutton">Read More</button>
+    </div>
+
   </section>
 
   <!-- Skill section design -->
@@ -155,43 +158,57 @@
 
 
 
-<!-- Contact Section Design -->
-  <section class="contact" id="contact"> 
+  <!-- Contact Section Design -->
+  <section class="contact" id="contact">
     <h2 class="Heading"><span>Contact</span> Me</h2>
-    <form action="#">
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" placeholder="Full Name" required>
-            <span class="focus"></span>
-          </div>
-          <div class="input-field">
-            <input type="text" placeholder="Email Address" required>
-            <span class="focus"></span>
-          </div>
-        </div>
-        <div class="input-box">
-          <div class="input-field">
-            <input type="number" placeholder="Mobile Number" required>
-            <span class="focus"></span>
-          </div>
-          <div class="input-field">
-            <input type="text" placeholder="Email Subject" required>
-            <span class="focus"></span>
-          </div>
-        </div>
-
-        <div class="textarea-field">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    <form action="">
+      <div class="input-box">
+        <div class="input-field">
+          <input type="text" placeholder="Full Name" required>
           <span class="focus"></span>
         </div>
-        <div class="btn-box">
-          <button type="submit" class="btn-box">Submit</button>
+        <div class="input-field">
+          <input type="text" placeholder="Email Address" required>
+          <span class="focus"></span>
         </div>
+      </div>
+      <div class="input-box">
+        <div class="input-field">
+          <input type="number" placeholder="Mobile Number" required>
+          <span class="focus"></span>
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Email Subject" required>
+          <span class="focus"></span>
+        </div>
+      </div>
+
+      <div class="textarea-field">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <span class="focus"></span>
+      </div>
+      <div class="submitbutton">
+        <button type="submit" class="submitbutton" onclick="openPopup()">Submit</button>
+      </div>
+      <!-- <a href="#" class="btnSub">Submit</a> -->
+      </div>
+
+      <div class="popup" id="popup">
+        <img src="images/checked.png" alt="">
+        <h2>Thank You!</h2>
+        <p class="">Your message has been sent succesfully.</p>
+        <button type="button">Home</button>
     </form>
   </section>
 
   <!-- Footer Design -->
   <footer class="footer">
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="footer-text">
       <p>Copyrights &copy; 2023 by Kavya Sharma | All Rights Reserved.</p>
     </div>
@@ -202,10 +219,11 @@
 
 
 
+
   </footer>
 
-
   <script src="Script.js"></script>
+
 </body>
 
 </html>
