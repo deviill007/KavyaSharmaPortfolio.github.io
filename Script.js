@@ -68,7 +68,21 @@ window.onscroll = () => {
     }
   });
   
-
+//Get in touch 
+function getintouchmedia() {
+  var blur = document.getElementById("home-content");
+  blur.classList.add("activeblur");
+  document.body.classList.add("no-scroll");
+  var mediashow = document.querySelector(".getintouch");
+  mediashow.classList.add("visiblemedia");
+}
+function closeMediaShow() {
+  var blur = document.getElementById("home-content");
+  blur.classList.remove("activeblur");
+  document.body.classList.remove("no-scroll");
+  var mediaclose = document.querySelector(".getintouch");
+  mediaclose.classList.remove("visiblemedia");
+}
   //form filled toggle
   function toggle(event) {
     event.preventDefault(); // Prevent the default form submission behavior

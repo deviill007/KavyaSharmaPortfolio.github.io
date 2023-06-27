@@ -16,6 +16,19 @@ body {
     background: #150050;
     color: #ededed;
 }
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #3DB1FF; 
+    border-radius: 20px; 
+    transition: background-color 0.3s;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to bottom, #3db1ff, #e81cff);
+}
 
 .header {
 
@@ -179,7 +192,7 @@ section {
 
 .second-text li span {
     position: relative;
-    line-height: 50px;
+    line-height: 51.1px;
 }
 
 .second-text li span::after {
@@ -251,6 +264,7 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    cursor: pointer;
 }
 
 .btn-box a:hover {
@@ -300,7 +314,81 @@ section {
 .btn-box a:hover:before {
     width: 100%;
 }
-
+.home .getintouch {
+    position: absolute;
+    display: none;
+    z-index: 999999999999999;
+    gap: 80px;
+    transform: translateY(-50%) scale(0);
+  }
+  
+  .getintouch > div {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    z-index: 999999;
+    transition: 0.3s;
+    transform: translateY(-50%) scale(1);
+    cursor: pointer;
+  }
+  .getintouch.visiblemedia {
+    display: contents;
+  }
+  .getintouch > div:nth-child(1) {
+    left: 35%;
+  }
+  
+  .getintouch > div:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .getintouch > div:nth-child(3) {
+    right: 35%;
+  }
+  
+  .getintouch > div img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .getintouch > div p {
+    margin-top: 20px;
+    max-width: 300px;
+    color: #11003f;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 12%;
+    right: 48.2%;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999999999999999;
+  }
+  
+  
 .home-sci {
     position: absolute;
     bottom: 20px;
