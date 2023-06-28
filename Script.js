@@ -72,6 +72,8 @@ window.onscroll = () => {
 function getintouchmedia() {
   var blur = document.getElementById("home-content");
   blur.classList.add("activeblur");
+  var blur2 = document.getElementById("about");
+  blur2.classList.add("activeblur");
   document.body.classList.add("no-scroll");
   var mediashow = document.querySelector(".getintouch");
   mediashow.classList.add("visiblemedia");
@@ -79,6 +81,8 @@ function getintouchmedia() {
 function closeMediaShow() {
   var blur = document.getElementById("home-content");
   blur.classList.remove("activeblur");
+  var blur2 = document.getElementById("about");
+  blur2.classList.remove("activeblur");
   document.body.classList.remove("no-scroll");
   var mediaclose = document.querySelector(".getintouch");
   mediaclose.classList.remove("visiblemedia");
