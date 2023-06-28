@@ -1274,19 +1274,16 @@ button i {
         font-size: 14px;
     }
     
-    .home-sci {
-        margin-top: 10px;
-    }
     .container {
         display: none;
     }
     .skills .skills-row {
         display: flex;
         flex-direction: column;
-        width: 390px;
+        width: 350px;
     }
     .skills-row .skills-column{
-        width: 400px;
+        width: 350px;
         max-width: 70%;
     }
     .skills-column .title {
@@ -1310,6 +1307,7 @@ button i {
     .contact form .input-box .input-field {
         width: 370px;
         height: 60px;
+        max-width: 740px;
     }
     .contact form .input-box .input-field input, .contact form .textarea-field textarea{
         font-size: 14px;
@@ -1318,16 +1316,17 @@ button i {
         font-size: 18px;
     }
     .home-content h1{
-        margin-top: 150px;
+        margin-top: 170px;
         font-size: 40px;
     }
     .home-sci {
+        position: relative;
         display: flex;
         flex-direction: column;
-        left: 50%;
         align-items: center;
         gap: 16px;
-        top: 88%;
+        left: 50%;
+        margin-top: -130px;
         max-height: fit-content;
     }
     .Heading {
@@ -1387,5 +1386,26 @@ button i {
         border-left: 2px solid #FB2576;
         animation: typing 3s steps(20) infinite;
       }
-            
+      .getintouch > div:nth-child(1) {
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      
+      .getintouch > div:nth-child(2) {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      
+      .getintouch > div:nth-child(3) {
+        right: 50%;
+        top: 70%;
+        transform: translateX(50%) translateY(-50%);
+      }        
+      .close-button {
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%) translateY(-50%);
+      }
 }
