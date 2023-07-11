@@ -1,3 +1,96 @@
+// Add event listener for scroll
+window.addEventListener('scroll', scrollHandler);
+
+// Handler function to check scroll position and apply animation
+function scrollHandler() {
+  const aboutSection = document.querySelectorAll('.Heading');
+
+  function animateheading() {
+    aboutSection.forEach(section => {
+      const aboutPosition = section.getBoundingClientRect().top;
+      if (aboutPosition < window.innerHeight * 0.75) {
+        section.classList.add('show'); 
+      }
+    });
+  }
+  
+  const aboutimgSection = document.querySelector('.about-image');
+  const aboutimgPosition = aboutimgSection.getBoundingClientRect().top;
+
+  if (aboutimgPosition < window.innerHeight * 0.70) {
+    aboutimgSection.classList.add('show'); 
+  }
+  const aboutparaSectionsl = document.querySelectorAll('.leftpara');
+  const aboutparaSectionsr = document.querySelectorAll('.rightpara');
+
+  function animateAboutparaSectionsl() {
+    aboutparaSectionsl.forEach(section => {
+      const sectionPosition = section.getBoundingClientRect().top;
+      if (sectionPosition < window.innerHeight * 0.65) {
+        section.classList.add('show'); 
+      }
+    });
+  }
+  function animateAboutparaSectionsr() {
+    aboutparaSectionsr.forEach(section => {
+      const sectionPosition = section.getBoundingClientRect().top;
+      if (sectionPosition < window.innerHeight * 0.65) {
+        section.classList.add('show');
+      }
+    });
+  }
+  const skillcolumn = document.querySelectorAll('.skills-column');
+
+  function animateskillcolumn() {
+    skillcolumn.forEach((column, index) => {
+      const columnPosition = column.getBoundingClientRect().top;
+      const delay = index * 500; // Adjust the delay time here (0.5s = 500ms)
+  
+      if (columnPosition < window.innerHeight * 0.65) {
+        setTimeout(() => {
+          column.classList.add('show'); // Apply animation class after the delay
+        }, delay);
+      }
+    });
+  }
+  const pro1 = document.querySelector('.project1');
+  const pro1position = pro1.getBoundingClientRect().top;
+  if (pro1position < window.innerHeight * 0.70) {
+    pro1.classList.add('show'); 
+  }
+  const pro2 = document.querySelector('.project2');
+  const pro2position = pro2.getBoundingClientRect().top;
+  if (pro2position < window.innerHeight * 0.70) {
+    pro2.classList.add('show'); 
+  }
+  const pro3 = document.querySelector('.project3');
+  const pro3position = pro3.getBoundingClientRect().top;
+  if (pro3position < window.innerHeight * 0.70) {
+    pro3.classList.add('show'); 
+  }
+  const pro4 = document.querySelector('.project4');
+  const pro4position = pro4.getBoundingClientRect().top;
+  if (pro4position < window.innerHeight * 0.70) {
+    pro4.classList.add('show'); 
+  }
+  const cform = document.querySelector('.myform');
+  const theformposition = cform.getBoundingClientRect().top;
+  if (theformposition < window.innerHeight * 0.70) {
+    cform.classList.add('show'); 
+  }
+
+
+  animateAboutparaSectionsl();
+  animateAboutparaSectionsr();
+  animateheading();
+  animateskillcolumn();
+  
+
+
+
+  window.addEventListener('scroll', animateAboutparaSections);
+  
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 //menu icon toggle
