@@ -1,330 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="images/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Design.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="x-icon" href="images/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="Design.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
-
-<body class="blur">
-
-  <header class="header">
-    <a href="#" class="logo">Kavya Sharma</a>
-    <div class="bx bx-menu" id="menu-icon"></div>
-    <nav class="Navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <!-- Home section design -->
-  <section class="home" id="home">
-    <div class="home-content" id="home-content">
-      <h1>Hi, I'm Kavya Sharma</h1>
-      <div class="text-animate">
-        <span class="first-text">A</span>
-        <ul class="second-text">
-          <li><span>Frontend Developer</span></li>
-          <li><span>UI/UX Designer</span></li>
-          <li><span>Graphic Designer</span></li>
-          <li><span>Video Editor/Maker</span></li>
-        </ul>
+  <body class="blur">
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <header class="header">
+      <a href="#" class="logo">Kavya Sharma</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav class="Navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- Home section design -->
+    <section class="home" id="home">
+      <div class="home-content" id="home-content">
+        <h1>Hi, I'm Kavya Sharma</h1>
+        <div class="text-animate">
+          <span class="first-text">A</span>
+          <ul class="second-text">
+            <li><span>Frontend Developer</span></li>
+            <li><span>UI/UX Designer</span></li>
+            <li><span>Graphic Designer</span></li>
+            <li><span>Video Editor/Maker</span></li>
+          </ul>
+        </div>
+        <p>
+          I'm a versatile creative professional skilled in front-end and
+          back-end development, UI/UX design, graphic design, and video editing.
+          With a passion for creating engaging digital experiences, I bring
+          together technical expertise and a keen eye for aesthetics to deliver
+          impactful solutions. Explore my portfolio to witness the synergy of
+          design, code, and visual storytelling come to life.
+        </p>
+        <div class="btn-box">
+          <a href="mailto:8kavyasharma@email.com" class="">Hire Me</a>
+          <a class="" onclick="getintouchmedia()">Get in Touch</a>
+          <a
+            href="https://drive.google.com/file/d/1eaSIfAaNkg9mcF6I_U2tpd9c3aL5x6oY/view"
+            class=""
+            >Download CV</a
+          >
+        </div>
+        <div class="home-sci">
+          <a href="https://github.com/deviill007"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="mailto:8kavyasharma@email.com"
+            ><i class="bx bxl-gmail"></i
+          ></a>
+        </div>
       </div>
-      <p>I'm a versatile creative professional skilled in front-end and back-end development, UI/UX design, graphic
-        design, and video editing. With a passion for creating engaging digital experiences, I bring together technical
-        expertise and a keen eye for aesthetics to deliver impactful solutions. Explore my portfolio to witness the
-        synergy of design, code, and visual storytelling come to life.</p>
+      <div class="getintouch">
+        <div class="whatsappdiv">
+          <a href="https://wa.me/9530111676">
+            <img src="images/whatsapp (1).png" alt="" />
+          </a>
+        </div>
+        <div class="instadiv">
+          <a href="https://ig.me/m/bhardwaj__kavya__">
+            <img src="images/instagram.png" alt="" />
+          </a>
+        </div>
+        <div class="facebookdiv">
+          <a href="http://m.me/8kavyasharma@gmail.com">
+            <img src="images/facebook.png" alt="" />
+          </a>
+        </div>
+        <button class="close-button" onclick="closeMediaShow()">&times;</button>
+      </div>
+      <span class="home-imghover"></span>
+    </section>
+
+    <!-- About Section Design -->
+    <section class="about" id="about">
+      <h2 class="Heading">About <span>Me</span></h2>
+
+      <div class="about-image">
+        <img src="images/Picsart_22-04-22_14-36-19-860.png" alt="" />
+        <!-- <span class="circle-spin"></span> -->
+      </div>
+
+      <div class="about-content">
+        <!-- <h3>Frontend Developer</h3> -->
+        <p class="leftpara">
+          Hello! I'm Kavya Sharma, a passionate frontend and backend developer
+          with a deep love for crafting exceptional digital experiences. I have
+          a strong foundation in web development and a keen eye for design,
+          allowing me to create visually stunning and user-friendly websites.
+        </p>
+        <p class="rightpara">
+          <span>Frontend Development</span><br />I specialize in front-end
+          development, bringing designs to life with clean, efficient, and
+          responsive code. I'm proficient in HTML, CSS, JavaScript, and various
+          modern frameworks like React and Vue.js. I strive to build intuitive
+          and engaging user interfaces that enhance the overall user experience.
+        </p>
+        <p class="leftpara">
+          <span>Backend Development</span><br />With a solid understanding of
+          backend technologies, I excel in creating robust and scalable web
+          applications. I'm experienced in server-side programming languages
+          such as Python and Node.js, as well as frameworks like Django and
+          Express.js. I have a knack for designing efficient databases and
+          implementing RESTful APIs to power dynamic web applications.
+        </p>
+        <div class="extra-paragraph">
+          <p class="rightpara">
+            <span>Full Stack Expertise</span><br />As a full stack developer, I
+            have a comprehensive understanding of both frontend and backend
+            development. This enables me to seamlessly bridge the gap between
+            the two and deliver end-to-end solutions. I'm comfortable working
+            with various tools, libraries, and databases to ensure smooth
+            communication between the client and server sides.
+          </p>
+
+          <p class="leftpara">
+            <span>Problem Solver</span><br />I thrive on solving complex
+            challenges and finding innovative solutions. I have a strong
+            analytical mindset and attention to detail, which helps me identify
+            issues and implement efficient strategies to overcome them. Whether
+            it's debugging code, optimizing performance, or implementing new
+            features, I'm always up for a coding adventure.
+          </p>
+
+          <p class="rightpara">
+            <span>Continuous Learning</span><br />Technology is constantly
+            evolving, and I believe in staying up-to-date with the latest trends
+            and best practices. I'm passionate about learning new technologies,
+            frameworks, and techniques to enhance my skill set and deliver
+            cutting-edge solutions to my clients. I'm a firm believer in
+            collaboration and teamwork. I enjoy working with cross-functional
+            teams, including designers, product managers, and other developers,
+            to create exceptional digital products. I value effective
+            communication, attention to detail, and a strong work ethic.
+          </p>
+
+          <p class="leftpara">
+            Thank you for visiting my website! Feel free to explore my portfolio
+            and get in touch if you have any inquiries or project opportunities.
+            I look forward to connecting with you and turning your ideas into
+            reality!
+          </p>
+        </div>
+      </div>
       <div class="btn-box">
-        <a href="mailto:8kavyasharma@email.com" class="">Hire Me</a>
-        <a class="" onclick="getintouchmedia()">Get in Touch</a>
-        <a href="https://drive.google.com/file/d/1eaSIfAaNkg9mcF6I_U2tpd9c3aL5x6oY/view" class="">Download
-          CV</a>
+        <button class="RMbutton" id="RMbutton">Read More</button>
       </div>
-      <div class="home-sci">
-        <a href="https://github.com/deviill007"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"><i class='bx bxl-linkedin'></i></a>
-        <a href="mailto:8kavyasharma@email.com"><i class='bx bxl-gmail'></i></a>
-      </div>
-    </div>
-    <div class="getintouch">
-      <div class="whatsappdiv">
-        <a href="https://wa.me/9530111676">
-          <img src="images/whatsapp (1).png" alt="">
-        </a>
-      </div>
-      <div class="instadiv">
-      <a href="https://ig.me/m/bhardwaj__kavya__">  
-        <img src="images/instagram.png" alt="">
-      </a>
-      </div>
-      <div class="facebookdiv">
-      <a href="http://m.me/8kavyasharma@gmail.com">
-        <img src="images/facebook.png" alt="">
-      </a>
-      </div>
-      <button class="close-button" onclick="closeMediaShow()">&times;</button>
-    </div>
-    <span class="home-imghover"></span>
+    </section>
 
-  </section>
+    <!-- Skill section design -->
+    <section class="skills" id="skills">
+      <h2 class="Heading">My <span>Skills</span></h2>
 
-  <!-- About Section Design -->
-  <section class="about" id="about">
-    <h2 class="Heading">About <span>Me</span></h2>
+      <div class="skills-row">
+        <div class="skills-column">
+          <h3 class="title">Languages</h3>
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>C/C++ <span> 95%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
 
-    <div class="about-image">
-      <img src="images/Picsart_22-04-22_14-36-19-860.png" alt="">
-      <span class="circle-spin"></span>
+              <div class="progress">
+                <h3>HTML <span> 90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
 
-    </div>
+              <div class="progress">
+                <h3>CSS <span> 80%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
 
-    <div class="about-content">
-      <!-- <h3>Frontend Developer</h3> -->
-      <p class="leftpara">Hello! I'm Kavya Sharma, a passionate frontend and backend developer with a deep love for
-        crafting exceptional digital experiences. I have a strong foundation in web development and a keen eye for
-        design, allowing me to create visually stunning and user-friendly websites.</p>
-      <p class="rightpara"><span>Frontend Development</span><br>I specialize in front-end development, bringing designs
-        to life with clean, efficient, and responsive code. I'm proficient in HTML, CSS, JavaScript, and various modern
-        frameworks like React and Vue.js. I strive to build intuitive and engaging user interfaces that enhance the
-        overall user experience.</p>
-      <p class="leftpara"><span>Backend Development</span><br>With a solid understanding of backend technologies, I
-        excel in creating robust and scalable web applications. I'm experienced in server-side programming languages
-        such as Python and Node.js, as well as frameworks like Django and Express.js. I have a knack for designing
-        efficient databases and implementing RESTful APIs to power dynamic web applications.</p>
-      <div class="extra-paragraph">
-        <p class="rightpara"><span>Full Stack Expertise</span><br>As a full stack developer, I have a comprehensive
-          understanding of both frontend and backend development. This enables me to seamlessly bridge the gap between
-          the two and deliver end-to-end solutions. I'm comfortable working with various tools, libraries, and databases
-          to ensure smooth communication between the client and server sides. </p>
-
-        <p class="leftpara"><span>Problem Solver</span><br>I thrive on solving complex challenges and finding innovative
-          solutions. I have a strong analytical mindset and attention to detail, which helps me identify issues and
-          implement efficient strategies to overcome them. Whether it's debugging code, optimizing performance, or
-          implementing new features, I'm always up for a coding adventure. </p>
-
-        <p class="rightpara"><span>Continuous Learning</span><br>Technology is constantly evolving, and I believe in
-          staying up-to-date with the latest trends and best practices. I'm passionate about learning new technologies,
-          frameworks, and techniques to enhance my skill set and deliver cutting-edge solutions to my clients. I'm a
-          firm believer in collaboration and teamwork. I enjoy working with cross-functional teams, including designers,
-          product managers, and other developers, to create exceptional digital products. I value effective
-          communication, attention to detail, and a strong work ethic. </p>
-
-        <p class="leftpara">Thank you for visiting my website! Feel free to explore my portfolio and get in touch if you
-          have any inquiries or project opportunities. I look forward to connecting with you and turning your ideas into
-          reality!</p>
-
-
-      </div>
-
-    </div>
-    <div class="btn-box">
-      <button class="RMbutton" id="RMbutton">Read More</button>
-    </div>
-
-  </section>
-
-  <!-- Skill section design -->
-  <section class="skills" id="skills">
-    <h2 class="Heading">My <span>Skills</span></h2>
-
-
-    <div class="skills-row">
-
-      <div class="skills-column">
-        <h3 class="title">Languages</h3>
-        <div class="skills-box">
-          <div class="skills-content">
-
-            <div class="progress">
-              <h3>C/C++ <span> 95%</span></h3>
-              <div class="bar"><span></span>
+              <div class="progress">
+                <h3>JAVASCRIPT<span> 60%</span></h3>
+                <div class="bar"><span></span></div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="progress">
-              <h3>HTML <span> 90%</span></h3>
-              <div class="bar"><span></span>
+        <div class="skills-column">
+          <h3 class="title">Skills</h3>
+
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>Video Making/Editing <span> 95%</span></h3>
+                <div class="bar"><span></span></div>
               </div>
-            </div>
 
-            <div class="progress">
-              <h3>CSS <span> 80%</span></h3>
-              <div class="bar"><span></span>
+              <div class="progress">
+                <h3>Graphic Designing <span> 85%</span></h3>
+                <div class="bar"><span></span></div>
               </div>
-            </div>
 
-            <div class="progress">
-              <h3>JAVASCRIPT<span> 60%</span></h3>
-              <div class="bar"><span></span>
+              <div class="progress">
+                <h3>Web Development<span> 75%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Web Designing<span> 90%</span></h3>
+                <div class="bar"><span></span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
+    <!-- project section -->
 
-      <div class="skills-column">
-        <h3 class="title">Skills</h3>
-
-        <div class="skills-box">
-          <div class="skills-content">
-
-            <div class="progress">
-              <h3>Video Making/Editing <span> 95%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-
-            <div class="progress">
-              <h3>Graphic Designing <span> 85%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-
-            <div class="progress">
-              <h3>Web Development<span> 75%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-            <div class="progress">
-              <h3>Web Designing<span> 90%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- project section -->
-
-  <section class="projects" id="projects">
-    <h2 class="Heading">My <span>Projects</span></h2>
+    <section class="projects" id="projects">
+      <h2 class="Heading">My <span>Projects</span></h2>
       <div class="project1">
         <h3 class="title">Agriculture Assistance</h3>
-        <p>Agriculture Assistance is a comprehensive platform I developed, combining frontend and backend technologies,
-          to provide a holistic view of agriculture in India. It showcases detailed information about crops, farming
-          processes, and weather forecasts. With a focus on empowering farmers, the platform also includes severe
-          climate warnings to aid in decision-making and mitigate risks. Experience the power of technology and
-          agriculture synergy with Agriculture Assistance.</p>
+        <p>
+          Agriculture Assistance is a comprehensive platform I developed,
+          combining frontend and backend technologies, to provide a holistic
+          view of agriculture in India. It showcases detailed information about
+          crops, farming processes, and weather forecasts. With a focus on
+          empowering farmers, the platform also includes severe climate warnings
+          to aid in decision-making and mitigate risks. Experience the power of
+          technology and agriculture synergy with Agriculture Assistance.
+        </p>
         <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/AgricultureAssistance.github.io', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/AgricultureAssistance.github.io/', '_blank')">Visit Site</button>
+          <button
+            onclick="window.open('https://github.com/deviill007/AgricultureAssistance.github.io', '_blank')"
+          >
+            Code <i class="bx bx-download"></i>
+          </button>
+          <button
+            onclick="window.open('https://deviill007.github.io/AgricultureAssistance.github.io/', '_blank')"
+          >
+            Visit Site
+          </button>
         </div>
       </div>
       <div class="project2">
         <h3 class="title">Realtime Chat</h3>
-        <p>Realtime Chat is a dynamic messaging platform that I built using Node.js, React.js, and Chat Engine.io. This
-          platform provides seamless and instant communication for users, allowing them to engage in real-time
-          conversations. With its robust backend infrastructure and responsive frontend design, Realtime Chat delivers a
-          smooth and immersive chatting experience. Connect, interact, and stay connected with Realtime Chat, where
-          conversations come to life.</p>
+        <p>
+          Realtime Chat is a dynamic messaging platform that I built using
+          Node.js, React.js, and Chat Engine.io. This platform provides seamless
+          and instant communication for users, allowing them to engage in
+          real-time conversations. With its robust backend infrastructure and
+          responsive frontend design, Realtime Chat delivers a smooth and
+          immersive chatting experience. Connect, interact, and stay connected
+          with Realtime Chat, where conversations come to life.
+        </p>
         <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Node-React_RealTime-Chat', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Node-React_RealTime-Chat/', '_blank')">Visit Site</button>
+          <button
+            onclick="window.open('https://github.com/deviill007/Node-React_RealTime-Chat', '_blank')"
+          >
+            Code <i class="bx bx-download"></i>
+          </button>
+          <button
+            onclick="window.open('https://deviill007.github.io/Node-React_RealTime-Chat/', '_blank')"
+          >
+            Visit Site
+          </button>
         </div>
       </div>
       <div class="project3">
         <h3 class="title">Blockjump Game</h3>
-        <p>BlockJump is an addictive and engaging game I developed using HTML, CSS, and JavaScript. Test your reflexes
-          and agility as you navigate a jumping block through an ever-changing obstacle course. With smooth animations,
-          dynamic visuals, and responsive controls, BlockJump offers an immersive gaming experience. Challenge your high
-          score and enjoy endless hours of fun with this captivating HTML5 game.</p>
+        <p>
+          BlockJump is an addictive and engaging game I developed using HTML,
+          CSS, and JavaScript. Test your reflexes and agility as you navigate a
+          jumping block through an ever-changing obstacle course. With smooth
+          animations, dynamic visuals, and responsive controls, BlockJump offers
+          an immersive gaming experience. Challenge your high score and enjoy
+          endless hours of fun with this captivating HTML5 game.
+        </p>
         <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Block-Game', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Block-Game/', '_blank')">Visit Site</button>
+          <button
+            onclick="window.open('https://github.com/deviill007/Block-Game', '_blank')"
+          >
+            Code <i class="bx bx-download"></i>
+          </button>
+          <button
+            onclick="window.open('https://deviill007.github.io/Block-Game/', '_blank')"
+          >
+            Visit Site
+          </button>
         </div>
       </div>
       <div class="project4">
         <h3 class="title">Stopwatch</h3>
-        <p>Stopwatch is a simple yet powerful application I created using frontend technologies like HTML, CSS, and
-          JavaScript. This intuitive stopwatch allows users to accurately measure time intervals with precision. Whether
-          for timing exercises, tracking productivity, or managing tasks, Stopwatch offers a user-friendly interface and
-          reliable functionality. Enhance your time management skills and boost efficiency with the Stopwatch
-          application.</p>
+        <p>
+          Stopwatch is a simple yet powerful application I created using
+          frontend technologies like HTML, CSS, and JavaScript. This intuitive
+          stopwatch allows users to accurately measure time intervals with
+          precision. Whether for timing exercises, tracking productivity, or
+          managing tasks, Stopwatch offers a user-friendly interface and
+          reliable functionality. Enhance your time management skills and boost
+          efficiency with the Stopwatch application.
+        </p>
         <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Stopwatch', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Stopwatch/', '_blank')">Visit Site</button>
+          <button
+            onclick="window.open('https://github.com/deviill007/Stopwatch', '_blank')"
+          >
+            Code <i class="bx bx-download"></i>
+          </button>
+          <button
+            onclick="window.open('https://deviill007.github.io/Stopwatch/', '_blank')"
+          >
+            Visit Site
+          </button>
         </div>
       </div>
-  </section>
+    </section>
 
-
-
-
-  <!-- Contact Section Design -->
-  <section class="contact" id="contact">
-    <h2 class="Heading"><span>Contact</span> Me</h2>
-    <form id="my-form" onsubmit="toggle(event)" class="myform">
-      <div class="input-box">
-        <div class="input-field">
-          <input type="text" placeholder="Full Name" required id="name">
-          <span class="focus"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" placeholder="Email Address" required id="email">
-          <span class="focus"></span>
-        </div>
-      </div>
-      <div class="input-box">
-        <div class="input-field">
-          <input type="number" placeholder="Mobile Number" required id="mobile">
-          <span class="focus"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" placeholder="Email Subject" required id="subject">
-          <span class="focus"></span>
-        </div>
-      </div>
-
-      <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required id="message"></textarea>
-        <span class="focus"></span>
-      </div>
-      <div class="submit-button">
-        <button class="submitbutton">Submit</button>
-      </div>
-    </form>
-  </section>
-  <div id="popup" class="popup">
-    <img src="images/checked.png" alt="">
-    <h2>Thank You!</h2>
-    <p class="">Your message has been sent succesfully.</p>
-    <button type="button" class="home-button" id="home-button">Home</button>
+    <!-- Contact Section Design -->
+    <section class="contact" id="contact">
+      <h2 class="Heading"><span>Contact</span> Me</h2>
+      <form
+  id="my-form"
+  class="myform"
+  action="https://formspree.io/f/xbjnqdqb"
+  method="POST"
+>
+  <div class="input-box">
+    <div class="input-field">
+      <input name="name" placeholder="Full Name" required id="name" />
+      <span class="focus"></span>
+    </div>
+    <div class="input-field">
+      <input
+        name="email"
+        placeholder="Email Address"
+        required
+        id="email"
+      />
+      <span class="focus"></span>
+    </div>
+  </div>
+  <div class="input-box">
+    <div class="input-field">
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Mobile Number"
+        required
+        id="mobile"
+      />
+      <span class="focus"></span>
+    </div>
+    <div class="input-field">
+      <input
+        type="text"
+        name="subject"
+        placeholder="Email Subject"
+        required
+        id="subject"
+      />
+      <span class="focus"></span>
+    </div>
   </div>
 
-  <!-- Footer Design -->
-  <footer class="footer">
-    <div class="container">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+  <div class="textarea-field">
+    <textarea
+      name="message"
+      id="message"
+      cols="30"
+      rows="10"
+      placeholder="Your Message"
+      required
+    ></textarea>
+    <span class="focus"></span>
+  </div>
+  <div class="submit-button">
+    <button class="submitbutton">Submit</button>
+  </div>
+</form>
+
+    </section>
+    <div id="popup" class="popup">
+      <img src="images/checked.png" alt="" />
+      <h2>Thank You!</h2>
+      <p class="">Your message has been sent succesfully.</p>
+      <button type="button" class="home-button" id="home-button">Home</button>
     </div>
-    <div class="footer-text">
-      <p>Copyrights &copy; 2023 by Kavya Sharma | All Rights Reserved.</p>
-    </div>
 
-    <div class="footer-icontop">
-      <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-    </div>
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="footer-text">
+        <p>Copyrights &copy; 2023 by Kavya Sharma | All Rights Reserved.</p>
+      </div>
 
-
-
-
-  </footer>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="Script.js"></script>
-
-</body>
-
+      <div class="footer-icontop">
+        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="Script.js"></script>
+  </body>
 </html>

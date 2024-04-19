@@ -1,3 +1,16 @@
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  const mainContent = document.getElementById('mainContent');
+
+  // Add the 'loaded' class to the body when the content is loaded
+  document.body.classList.add('loaded');
+
+  // Remove the preloader after a short delay (optional)
+  setTimeout(function () {
+    preloader.style.display = 'none';
+  }, 500);
+});
+
 // Add event listener for scroll
 window.addEventListener('scroll', scrollHandler);
 
