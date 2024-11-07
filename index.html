@@ -1,330 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="images/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Design.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="x-icon" href="images/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="Design.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
-
-<body class="blur">
-
-  <header class="header">
-    <a href="#" class="logo">Kavya Sharma</a>
-    <div class="bx bx-menu" id="menu-icon"></div>
-    <nav class="Navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <!-- Home section design -->
-  <section class="home" id="home">
-    <div class="home-content" id="home-content">
-      <h1>Hi, I'm Kavya Sharma</h1>
-      <div class="text-animate">
-        <span class="first-text">A</span>
-        <ul class="second-text">
-          <li><span>Frontend Developer</span></li>
-          <li><span>UI/UX Designer</span></li>
-          <li><span>Graphic Designer</span></li>
-          <li><span>Video Editor/Maker</span></li>
-        </ul>
-      </div>
-      <p>I'm a versatile creative professional skilled in front-end and back-end development, UI/UX design, graphic
-        design, and video editing. With a passion for creating engaging digital experiences, I bring together technical
-        expertise and a keen eye for aesthetics to deliver impactful solutions. Explore my portfolio to witness the
-        synergy of design, code, and visual storytelling come to life.</p>
-      <div class="btn-box">
-        <a href="mailto:8kavyasharma@email.com" class="">Hire Me</a>
-        <a class="" onclick="getintouchmedia()">Get in Touch</a>
-        <a href="https://drive.google.com/file/d/1eaSIfAaNkg9mcF6I_U2tpd9c3aL5x6oY/view" class="">Download
-          CV</a>
-      </div>
-      <div class="home-sci">
-        <a href="https://github.com/deviill007"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"><i class='bx bxl-linkedin'></i></a>
-        <a href="mailto:8kavyasharma@email.com"><i class='bx bxl-gmail'></i></a>
+  <body class="blur">
+    <div id="circle"><span class="rotating-text">Play Video</span></div>
+    <div class="social-media">
+      <div class="media-logos">
+        <a
+          href="https://www.facebook.com/profile.php?id=100008131120392"
+          class="fb magnetic-button stickable"
+          target="_blank"
+          ><img src="images/facebook_pf.png" alt=""
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"
+          class="linkdin magnetic-button stickable"
+          target="_blank"
+          ><img src="images/linkedin_pf.png" alt=""
+        /></a>
+        <a
+          href="https://www.instagram.com/bhardwaj__kavya__/"
+          class="insta magnetic-button stickable"
+          target="_blank"
+          ><img src="images/insta_pf.png" alt=""
+        /></a>
       </div>
     </div>
-    <div class="getintouch">
-      <div class="whatsappdiv">
-        <a href="https://wa.me/9530111676">
-          <img src="images/whatsapp (1).png" alt="">
-        </a>
+    <header class="header">
+      <a href="#" class="logo">Kavya Sharma</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav class="Navbar">
+        <a href="#home" class="active hideCircle"
+          ><span data-hover="Home">Home</span></a
+        >
+        <a href="#about" class="hideCircle"
+          ><span data-hover="About">About</span></a
+        >
+        <a href="#projects" class="hideCircle"
+          ><span data-hover="Projects">Projects</span></a
+        >
+        <a href="#contact" class="hideCircle"
+          ><span data-hover="Contact">Contact</span></a
+        >
+      </nav>
+    </header>
+    <!-- Home section design -->
+    <section class="home" id="home">
+      <div class="home-content" id="home-content">
+        <h2 class="hoverable rise-up-reveal">Hi, I'm Kavya Sharma</h2>
+        <div class="text hoverable">
+          <div class="text-container">
+            <h1 class="hoverable rise-up-reveal"><span></span>Mernstack</h1>
+          </div>
+          <div class="text-container">
+            <h1 class="hoverable rise-up-reveal">
+              <span>UI/UX</span>
+            </h1>
+          </div>
+          <div class="text-container">
+            <h1 class="hoverable rise-up-reveal"><span></span>Graphics</h1>
+          </div>
+        </div>
+        <div class="home-sci scroll-reveal">
+          <a
+            href="https://github.com/deviill007"
+            class="stickable magnetic-button"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"
+            class="stickable magnetic-button"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="mailto:8kavyasharma@email.com"
+            class="stickable magnetic-button"
+            ><i class="bx bxl-gmail"></i
+          ></a>
+        </div>
       </div>
-      <div class="instadiv">
-      <a href="https://ig.me/m/bhardwaj__kavya__">  
-        <img src="images/instagram.png" alt="">
-      </a>
+    </section>
+
+    <!-- About Section Design -->
+    <section class="about" id="about">
+      <h2 class="Heading scroll-reveal hoverable">About <span>Me</span></h2>
+      <div class="about-content">
+        <p class="scroll-reveal hoverable">
+          <span class="big">“</span>I'm a creative professional skilled in
+          front-end and back-end development, UI/UX, graphic design, and video
+          editing. I combine technical skill with a strong aesthetic sense to
+          craft impactful digital experiences. Explore my portfolio for
+          more.<span class="big">”</span>
+        </p>
       </div>
-      <div class="facebookdiv">
-      <a href="http://m.me/8kavyasharma@gmail.com">
-        <img src="images/facebook.png" alt="">
-      </a>
+    </section>
+
+    <!-- project section -->
+
+    <section class="projects" id="projects">
+      <h2 class="Heading scroll-reveal hoverable">My <span>Projects</span></h2>
+      <hr />
+      <div class="project wipe-reveal">
+        <div>
+          <h2 class="hideCircle">2024</h2>
+          <h2 class="hideCircle">Vastra Villa</h2>
+        </div>
+        <div>
+          <p class="hideCircle">Shopping made MERNvelous with VastraVila!</p>
+          <a href="https://vastra-vila.onrender.com/"><img src="images/arrow.png" class="magnetic-button stickable" /></a>
+          
+        </div>
       </div>
-      <button class="close-button" onclick="closeMediaShow()">&times;</button>
-    </div>
-    <span class="home-imghover"></span>
-
-  </section>
-
-  <!-- About Section Design -->
-  <section class="about" id="about">
-    <h2 class="Heading">About <span>Me</span></h2>
-
-    <div class="about-image">
-      <img src="images/Picsart_22-04-22_14-36-19-860.png" alt="">
-      <span class="circle-spin"></span>
-
-    </div>
-
-    <div class="about-content">
-      <!-- <h3>Frontend Developer</h3> -->
-      <p class="leftpara">Hello! I'm Kavya Sharma, a passionate frontend and backend developer with a deep love for
-        crafting exceptional digital experiences. I have a strong foundation in web development and a keen eye for
-        design, allowing me to create visually stunning and user-friendly websites.</p>
-      <p class="rightpara"><span>Frontend Development</span><br>I specialize in front-end development, bringing designs
-        to life with clean, efficient, and responsive code. I'm proficient in HTML, CSS, JavaScript, and various modern
-        frameworks like React and Vue.js. I strive to build intuitive and engaging user interfaces that enhance the
-        overall user experience.</p>
-      <p class="leftpara"><span>Backend Development</span><br>With a solid understanding of backend technologies, I
-        excel in creating robust and scalable web applications. I'm experienced in server-side programming languages
-        such as Python and Node.js, as well as frameworks like Django and Express.js. I have a knack for designing
-        efficient databases and implementing RESTful APIs to power dynamic web applications.</p>
-      <div class="extra-paragraph">
-        <p class="rightpara"><span>Full Stack Expertise</span><br>As a full stack developer, I have a comprehensive
-          understanding of both frontend and backend development. This enables me to seamlessly bridge the gap between
-          the two and deliver end-to-end solutions. I'm comfortable working with various tools, libraries, and databases
-          to ensure smooth communication between the client and server sides. </p>
-
-        <p class="leftpara"><span>Problem Solver</span><br>I thrive on solving complex challenges and finding innovative
-          solutions. I have a strong analytical mindset and attention to detail, which helps me identify issues and
-          implement efficient strategies to overcome them. Whether it's debugging code, optimizing performance, or
-          implementing new features, I'm always up for a coding adventure. </p>
-
-        <p class="rightpara"><span>Continuous Learning</span><br>Technology is constantly evolving, and I believe in
-          staying up-to-date with the latest trends and best practices. I'm passionate about learning new technologies,
-          frameworks, and techniques to enhance my skill set and deliver cutting-edge solutions to my clients. I'm a
-          firm believer in collaboration and teamwork. I enjoy working with cross-functional teams, including designers,
-          product managers, and other developers, to create exceptional digital products. I value effective
-          communication, attention to detail, and a strong work ethic. </p>
-
-        <p class="leftpara">Thank you for visiting my website! Feel free to explore my portfolio and get in touch if you
-          have any inquiries or project opportunities. I look forward to connecting with you and turning your ideas into
-          reality!</p>
-
-
+      <hr />
+      <div class="project wipe-reveal">
+        <div>
+          <h2 class="hideCircle">2023</h2>
+          <h2 class="hideCircle">Agriculture Assistance</h2>
+        </div>
+        <div>
+          <p class="hideCircle">
+            Code that plants seeds of wisdom for farmers!
+          </p>
+          <a href="https://deviill007.github.io/AgricultureAssistance.github.io/"><img src="images/arrow.png" class="magnetic-button stickable" /></a>
+          
+        </div>
       </div>
+      <hr />
+      <div class="project wipe-reveal">
+        <div>
+          <h2 class="hideCircle">2023</h2>
+          <h2 class="hideCircle">Chat Hub</h2>
+        </div>
+        <div>
+          <p class="hideCircle">
+            Built a hub where messages fly faster than coffee refills!
+          </p>
+          <a href="#"><img src="images/arrow.png" class="magnetic-button stickable" /></a>
+        </div>
+      </div>
+      <hr />
+    </section>
 
-    </div>
-    <div class="btn-box">
-      <button class="RMbutton" id="RMbutton">Read More</button>
-    </div>
+    <!--Motto Section-->
+    <section class="mottos" id="mottos">
+      <h2 class="Heading scroll-reveal hoverable"><span>My</span> Motto</h2>
+      <hr />
+      <div class="motto wipe-reveal hoverable">
+        <h2 class="hoverable scroll-reveal">Turning</h2>
+        <div>
+          <p class="hideCircle">Design</p>
+        </div>
+      </div>
+      <hr />
+      <div class="motto wipe-reveal hoverable">
+        <h2 class="hoverable scroll-reveal">Ideas into</h2>
+        <div>
+          <p class="hideCircle">Guru</p>
+        </div>
+      </div>
+      <hr />
+      <div class="motto wipe-reveal hoverable">
+        <h2 class="hoverable scroll-reveal">Digital Experiences</h2>
+        <div>
+          <p class="hideCircle">Ui</p>
+        </div>
+      </div>
+      <hr />
+      <div class="motto wipe-reveal hoverable">
+        <h2 class="hoverable scroll-reveal">that Inspire Change</h2>
+        <div>
+          <p class="hideCircle">Whisperer</p>
+        </div>
+      </div>
+      <hr />
+    </section>
 
-  </section>
+    <!-- Video Section Design -->
+    <section class="video-section" id="video-section">
+      <ul class="photo">
+      <li class="photo"><video class="play-reel" id="video" src="images/My Video.mp4"></video></li>
+    </ul>
+    </section>
 
-  <!-- Skill section design -->
-  <section class="skills" id="skills">
-    <h2 class="Heading">My <span>Skills</span></h2>
-
-
-    <div class="skills-row">
-
-      <div class="skills-column">
-        <h3 class="title">Languages</h3>
-        <div class="skills-box">
-          <div class="skills-content">
-
-            <div class="progress">
-              <h3>C/C++ <span> 95%</span></h3>
-              <div class="bar"><span></span>
-              </div>
+    <!-- Contact Section Design -->
+    <section class="contact" id="contact">
+      <h2 class="Heading hoverable scroll-reveal"><span>Contact</span> Me</h2>
+      <div class="contact-row">
+        <div class="contact-col">
+          <div class="contact-item hideCircle wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="https://dribbble.com/deviill"><span><i class="fa-solid fa-caret-right"></i> </span> Dribble</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Pretend Portfolio</p>
             </div>
-
-            <div class="progress">
-              <h3>HTML <span> 90%</span></h3>
-              <div class="bar"><span></span>
-              </div>
+          </div>
+          <div class="contact-item wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="#"><span><i class="fa-solid fa-caret-right"></i> </span> Facebook</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Dog-Updates</p>
             </div>
-
-            <div class="progress">
-              <h3>CSS <span> 80%</span></h3>
-              <div class="bar"><span></span>
-              </div>
+          </div>
+          <div class="contact-item wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="#"><span><i class="fa-solid fa-caret-right"></i> </span> Instagram</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Insta-Jealousy</p>
             </div>
-
-            <div class="progress">
-              <h3>JAVASCRIPT<span> 60%</span></h3>
-              <div class="bar"><span></span>
-              </div>
+          </div>
+        </div>
+        <div class="contact-col">
+          <div class="contact-item wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="https://www.linkedin.com/in/kavya-sharma-b143651ba/"><span><i class="fa-solid fa-caret-right"></i> </span> LinkedIn</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Brag Land</p>
+            </div>
+          </div>
+          <div class="contact-item wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="mailto:8kavyasharma@email.com"><span><i class="fa-solid fa-caret-right"></i> </span> Gmail</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Spam Fest</p>
+            </div>
+          </div>
+          <div class="contact-item wipe-reveal">
+            <h2 class="hideCircle">
+              <a href="https://github.com/deviill007"><span><i class="fa-solid fa-caret-right"></i> </span> Github</a>
+            </h2>
+            <div>
+              <p class="hideCircle">Copy source codes ?</p>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="skills-column">
-        <h3 class="title">Skills</h3>
-
-        <div class="skills-box">
-          <div class="skills-content">
-
-            <div class="progress">
-              <h3>Video Making/Editing <span> 95%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-
-            <div class="progress">
-              <h3>Graphic Designing <span> 85%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-
-            <div class="progress">
-              <h3>Web Development<span> 75%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-            <div class="progress">
-              <h3>Web Designing<span> 90%</span></h3>
-              <div class="bar"><span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- project section -->
-
-  <section class="projects" id="projects">
-    <h2 class="Heading">My <span>Projects</span></h2>
-      <div class="project1">
-        <h3 class="title">Agriculture Assistance</h3>
-        <p>Agriculture Assistance is a comprehensive platform I developed, combining frontend and backend technologies,
-          to provide a holistic view of agriculture in India. It showcases detailed information about crops, farming
-          processes, and weather forecasts. With a focus on empowering farmers, the platform also includes severe
-          climate warnings to aid in decision-making and mitigate risks. Experience the power of technology and
-          agriculture synergy with Agriculture Assistance.</p>
-        <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/AgricultureAssistance.github.io', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/AgricultureAssistance.github.io/', '_blank')">Visit Site</button>
-        </div>
-      </div>
-      <div class="project2">
-        <h3 class="title">Realtime Chat</h3>
-        <p>Realtime Chat is a dynamic messaging platform that I built using Node.js, React.js, and Chat Engine.io. This
-          platform provides seamless and instant communication for users, allowing them to engage in real-time
-          conversations. With its robust backend infrastructure and responsive frontend design, Realtime Chat delivers a
-          smooth and immersive chatting experience. Connect, interact, and stay connected with Realtime Chat, where
-          conversations come to life.</p>
-        <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Node-React_RealTime-Chat', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Node-React_RealTime-Chat/', '_blank')">Visit Site</button>
-        </div>
-      </div>
-      <div class="project3">
-        <h3 class="title">Blockjump Game</h3>
-        <p>BlockJump is an addictive and engaging game I developed using HTML, CSS, and JavaScript. Test your reflexes
-          and agility as you navigate a jumping block through an ever-changing obstacle course. With smooth animations,
-          dynamic visuals, and responsive controls, BlockJump offers an immersive gaming experience. Challenge your high
-          score and enjoy endless hours of fun with this captivating HTML5 game.</p>
-        <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Block-Game', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Block-Game/', '_blank')">Visit Site</button>
-        </div>
-      </div>
-      <div class="project4">
-        <h3 class="title">Stopwatch</h3>
-        <p>Stopwatch is a simple yet powerful application I created using frontend technologies like HTML, CSS, and
-          JavaScript. This intuitive stopwatch allows users to accurately measure time intervals with precision. Whether
-          for timing exercises, tracking productivity, or managing tasks, Stopwatch offers a user-friendly interface and
-          reliable functionality. Enhance your time management skills and boost efficiency with the Stopwatch
-          application.</p>
-        <div class="buttoncontainer">
-          <button onclick="window.open('https://github.com/deviill007/Stopwatch', '_blank')">Code <i class='bx bx-download'></i></button>
-          <button onclick="window.open('https://deviill007.github.io/Stopwatch/', '_blank')">Visit Site</button>
-        </div>
-      </div>
-  </section>
-
-
-
-
-  <!-- Contact Section Design -->
-  <section class="contact" id="contact">
-    <h2 class="Heading"><span>Contact</span> Me</h2>
-    <form id="my-form" onsubmit="toggle(event)" class="myform">
-      <div class="input-box">
-        <div class="input-field">
-          <input type="text" placeholder="Full Name" required id="name">
-          <span class="focus"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" placeholder="Email Address" required id="email">
-          <span class="focus"></span>
-        </div>
-      </div>
-      <div class="input-box">
-        <div class="input-field">
-          <input type="number" placeholder="Mobile Number" required id="mobile">
-          <span class="focus"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" placeholder="Email Subject" required id="subject">
-          <span class="focus"></span>
-        </div>
-      </div>
-
-      <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required id="message"></textarea>
-        <span class="focus"></span>
-      </div>
-      <div class="submit-button">
-        <button class="submitbutton">Submit</button>
-      </div>
-    </form>
-  </section>
-  <div id="popup" class="popup">
-    <img src="images/checked.png" alt="">
-    <h2>Thank You!</h2>
-    <p class="">Your message has been sent succesfully.</p>
-    <button type="button" class="home-button" id="home-button">Home</button>
-  </div>
-
-  <!-- Footer Design -->
-  <footer class="footer">
-    <div class="container">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="footer-text">
-      <p>Copyrights &copy; 2023 by Kavya Sharma | All Rights Reserved.</p>
-    </div>
-
-    <div class="footer-icontop">
-      <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-    </div>
-
-
-
-
-  </footer>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="Script.js"></script>
-
-</body>
-
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script
+      src="https://kit.fontawesome.com/72a4fb5aa7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Script.js"></script>
+  </body>
 </html>

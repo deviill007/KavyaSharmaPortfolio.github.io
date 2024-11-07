@@ -1,99 +1,6 @@
-// Add event listener for scroll
-window.addEventListener('scroll', scrollHandler);
-
-// Handler function to check scroll position and apply animation
-function scrollHandler() {
-  const aboutSection = document.querySelectorAll('.Heading');
-
-  function animateheading() {
-    aboutSection.forEach(section => {
-      const aboutPosition = section.getBoundingClientRect().top;
-      if (aboutPosition < window.innerHeight * 0.75) {
-        section.classList.add('show'); 
-      }
-    });
-  }
-  
-  const aboutimgSection = document.querySelector('.about-image');
-  const aboutimgPosition = aboutimgSection.getBoundingClientRect().top;
-
-  if (aboutimgPosition < window.innerHeight * 0.70) {
-    aboutimgSection.classList.add('show'); 
-  }
-  const aboutparaSectionsl = document.querySelectorAll('.leftpara');
-  const aboutparaSectionsr = document.querySelectorAll('.rightpara');
-
-  function animateAboutparaSectionsl() {
-    aboutparaSectionsl.forEach(section => {
-      const sectionPosition = section.getBoundingClientRect().top;
-      if (sectionPosition < window.innerHeight * 0.65) {
-        section.classList.add('show'); 
-      }
-    });
-  }
-  function animateAboutparaSectionsr() {
-    aboutparaSectionsr.forEach(section => {
-      const sectionPosition = section.getBoundingClientRect().top;
-      if (sectionPosition < window.innerHeight * 0.65) {
-        section.classList.add('show');
-      }
-    });
-  }
-  const skillcolumn = document.querySelectorAll('.skills-column');
-
-  function animateskillcolumn() {
-    skillcolumn.forEach((column, index) => {
-      const columnPosition = column.getBoundingClientRect().top;
-      const delay = index * 500; // Adjust the delay time here (0.5s = 500ms)
-  
-      if (columnPosition < window.innerHeight * 0.65) {
-        setTimeout(() => {
-          column.classList.add('show'); // Apply animation class after the delay
-        }, delay);
-      }
-    });
-  }
-  const pro1 = document.querySelector('.project1');
-  const pro1position = pro1.getBoundingClientRect().top;
-  if (pro1position < window.innerHeight * 0.70) {
-    pro1.classList.add('show'); 
-  }
-  const pro2 = document.querySelector('.project2');
-  const pro2position = pro2.getBoundingClientRect().top;
-  if (pro2position < window.innerHeight * 0.70) {
-    pro2.classList.add('show'); 
-  }
-  const pro3 = document.querySelector('.project3');
-  const pro3position = pro3.getBoundingClientRect().top;
-  if (pro3position < window.innerHeight * 0.70) {
-    pro3.classList.add('show'); 
-  }
-  const pro4 = document.querySelector('.project4');
-  const pro4position = pro4.getBoundingClientRect().top;
-  if (pro4position < window.innerHeight * 0.70) {
-    pro4.classList.add('show'); 
-  }
-  const cform = document.querySelector('.myform');
-  const theformposition = cform.getBoundingClientRect().top;
-  if (theformposition < window.innerHeight * 0.70) {
-    cform.classList.add('show'); 
-  }
-
-
-  animateAboutparaSectionsl();
-  animateAboutparaSectionsr();
-  animateheading();
-  animateskillcolumn();
-  
-
-
-
-  window.addEventListener('scroll', animateAboutparaSections);
-  
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-//menu icon toggle
+
+  //menu icon toggle
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.Navbar');
 
@@ -102,10 +9,114 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+//Sticky Cursor
+const circle = document.getElementById('circle');
+let mouseX = 0, mouseY = 0;
+let circleX = 0, circleY = 0;
+const speed = 0.1;
+
+// Update mouse position based on cursor movement
+document.addEventListener('mousemove', (event) => {
+    mouseX = event.clientX - circle.offsetWidth / 2;
+    mouseY = event.clientY - circle.offsetHeight / 2;
+});
+
+// Adjust circle position based on scroll and cursor position
+function animate() {
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    
+    circleX += (mouseX + scrollX - circleX) * speed;
+    circleY += (mouseY + scrollY - circleY) * speed;
+    
+    circle.style.transform = `translate(${circleX}px, ${circleY}px)`;
+    
+    requestAnimationFrame(animate);
+}
+
+// Add hover effect
+const hoverableElements = document.querySelectorAll('.hoverable');
+
+hoverableElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        circle.classList.add('enlarged');
+    });
+
+    element.addEventListener('mouseleave', () => {
+        circle.classList.remove('enlarged');
+    });
+});
+const stickableElements = document.querySelectorAll('.stickable');
+
+stickableElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        circle.classList.add('stickyCircle');
+    });
+
+    element.addEventListener('mouseleave', () => {
+        circle.classList.remove('stickyCircle');
+    });
+});
+const textElements = this.querySelectorAll('.hideCircle');
+
+textElements.forEach(element => {
+  element.addEventListener('mouseenter', () => {
+      circle.classList.add('hideCircle');
+  });
+
+  element.addEventListener('mouseleave', () => {
+      circle.classList.remove('hideCircle');
+  });
+
+});
+const playReel = this.querySelectorAll('.play-reel');
+
+playReel.forEach(element => {
+  element.addEventListener('mouseenter', () => {
+      circle.classList.add('playReel');
+  });
+
+  element.addEventListener('mouseleave', () => {
+      circle.classList.remove('playReel');
+  });
+
+});
+animate();
+
+//Stick social media handle
+const buttons = document.querySelectorAll('.magnetic-button');
+const magneticStrength = 40;
+const stickDistance = 30; 
+
+// Function to update button position based on cursor
+function updateButtonPosition(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    buttons.forEach(button => {
+        const rect = button.getBoundingClientRect();
+        const buttonX = rect.left + rect.width / 2;
+        const buttonY = rect.top + rect.height / 2;
+
+        const deltaX = mouseX - buttonX;
+        const deltaY = mouseY - buttonY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        if (distance < stickDistance) {
+            const translateX = (deltaX / distance) * magneticStrength;
+            const translateY = (deltaY / distance) * magneticStrength;
+            button.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        } else {
+            button.style.transform = 'translate(0, 0)';
+        }
+    });
+}
+
+document.addEventListener('mousemove', updateButtonPosition);
+
 
 
 //Scroll Section
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -135,87 +146,66 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-// Read Me button 
-    var readMoreBtn = document.getElementById('RMbutton');
-    var extraParagraphs = document.getElementsByClassName('extra-paragraph');
-    var readMoreSection = document.getElementById('about');
-  
-    readMoreBtn.addEventListener('click', function() {
-      // Toggle visibility of extra paragraphs
-      for (var i = 0; i < extraParagraphs.length; i++) {
-        extraParagraphs[i].classList.toggle('show');
-      }
-  
-      // Update button text
-      if (readMoreBtn.textContent === 'Read More') {
-        readMoreBtn.textContent = 'Read Less';
-      } else {
-        readMoreBtn.textContent = 'Read More';
-        scrollToReadMore();
-      }
-    });
-    function scrollToReadMore() {
-        var readMoreBtnOffsetTop = readMoreBtn.getBoundingClientRect().top;
-        var scrollPosition = window.pageYOffset + readMoreBtnOffsetTop - window.innerHeight + 100;
-        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-    }
+    // Function to handle the scroll-based reveal effect
+function handleScrollReveal() {
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  revealElements.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      
+      const scrollProgress = Math.min(1, (windowHeight * 0.5 - rect.top) / (windowHeight * 0.5));
+      const backgroundPositionX = 150 - (scrollProgress * 100);
+      
+      element.style.backgroundPosition = `${backgroundPositionX}% 0`;
   });
-  
-//Get in touch 
-function getintouchmedia() {
-  var blur = document.getElementById("home-content");
-  blur.classList.add("activeblur");
-  var blur2 = document.getElementById("about");
-  blur2.classList.add("activeblur");
-  document.body.classList.add("no-scroll");
-  var mediashow = document.querySelector(".getintouch");
-  mediashow.classList.add("visiblemedia");
-}
-function closeMediaShow() {
-  var blur = document.getElementById("home-content");
-  blur.classList.remove("activeblur");
-  var blur2 = document.getElementById("about");
-  blur2.classList.remove("activeblur");
-  document.body.classList.remove("no-scroll");
-  var mediaclose = document.querySelector(".getintouch");
-  mediaclose.classList.remove("visiblemedia");
-}
-  //form filled toggle
-  function toggle(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-    var blur = document.getElementById("contact");
-    blur.classList.add("activeblur");
-    document.body.classList.add("no-scroll");
-    var appear = document.getElementById('popup');
-    appear.classList.add("appear");
 }
 
-// Get a reference to the Home button element
-var homeButton = document.getElementById("home-button");
+window.addEventListener('scroll', handleScrollReveal);
+handleScrollReveal();
 
-// Add an event listener to the Home button
-homeButton.addEventListener("click", function() {
-  // Reload the page
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  location.reload();
+
+
+//wipe effect in projects
+document.querySelectorAll('.wipe-reveal').forEach(element => {
+  element.addEventListener('mouseenter', () => {
+      element.classList.add('hover');
+  });
+
+  element.addEventListener('mouseleave', () => {
+      element.classList.remove('hover');
+  });
+});
+const videoSection = document.getElementById('video-section');
+const video = document.getElementById('video');
+let isPlaying = false;
+
+video.addEventListener('click', () => {
+  if (isPlaying) {
+    video.pause();
+  } else {
+    video.play();
+  }
+  isPlaying = !isPlaying;
 });
 
-//Contact form
-function sendmail() {
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "8kavyasharma@gmail.com",
-        Password : "F950F5331200575F29C9E05E875A6BD8121E",
-        To : '8kavyasharma@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : document.getElementById("subject").value,
-        Message : "Name: " + document.getElementById("name").value + "<br> Mobile Number: " + document.getElementById("mobile") + "<br> Message: " + document.getElementById("message")
-    }).then(
-        function (message) {
-        toggle(event); // Call the toggle function
-      },
-      function (error) {
-        alert("Failed to send email. Error: " + error);
-      }
-    );
-}
+video.addEventListener('dblclick', () => {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) {
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) {
+    video.msRequestFullscreen();
+  }
+});
+
+
+
+//rise-up text reveal
+const revealTexts = document.querySelectorAll('.rise-up-reveal');
+  revealTexts.forEach((element) => {
+    element.classList.add('active');
+  });
+
+  
+  });
